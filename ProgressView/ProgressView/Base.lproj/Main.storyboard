@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="asr-vd-nmc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Round Progress View Controller-->
+        <scene sceneID="v7a-6W-ju4">
+            <objects>
+                <viewController id="asr-vd-nmc" customClass="RoundProgressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rjs-mM-EEf"/>
+                        <viewControllerLayoutGuide type="bottom" id="vC5-fq-WRO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="446-xH-2wV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-MK-htv">
+                                <rect key="frame" x="59" y="556" width="256" height="31"/>
+                                <connections>
+                                    <action selector="changeSliderValue:" destination="asr-vd-nmc" eventType="valueChanged" id="Orp-F2-fyT"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdn-gg-MeG" customClass="RoundProgressView2">
+                                <rect key="frame" x="87" y="296" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UX-89-R9B" customClass="RoundProgressView1">
+                                <rect key="frame" x="87" y="38" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="progressView1" destination="3UX-89-R9B" id="4Nw-xJ-wRE"/>
+                        <outlet property="progressView2" destination="kdn-gg-MeG" id="jRy-GN-EIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="naU-sU-4re" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.5" y="141.5"/>
+        </scene>
+    </scenes>
+</document>
